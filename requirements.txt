@@ -1,3 +1,3 @@
 tensorflow==2.8.0
-Image==7.1.2
+ImageOps==1.1.3
 numpy==1.21.6
