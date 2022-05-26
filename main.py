@@ -1,5 +1,4 @@
 # import the libraries
-python3.9 -m pip install tensorflow
 import tensorflow as tf
 import streamlit as st
 from PIL import Image
