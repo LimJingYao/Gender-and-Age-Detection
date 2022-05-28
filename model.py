@@ -1,7 +1,6 @@
 # modules for data manipulation and data preprocessing
 import pandas as pd
 import numpy as np
-from numpy import asarray
 
 # modules for iamge processing
 import os
@@ -10,7 +9,6 @@ from PIL import Image
 
 # modules for data visualization
 import matplotlib.pyplot as plt
-import seaborn as sns
 
 # modules to create, train and save the model
 import tensorflow as tf
