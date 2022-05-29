@@ -102,3 +102,15 @@ history = model.fit(x=X, y=[y_gender, y_age], batch_size=32, epochs=15, validati
 tf.keras.models.save_model(model,'my_model.hdf5')
 history = pd.DataFrame(history.history)
 history.to_csv('history.csv')
+
+# performance evaluation
+image_index = 2022                    # change the index based on your preference
+gender_dict = {0:'Male', 1:'Female'}  # map labels for gender
+pred = model.predict(X[image_index].reshape(1, 128, 128, 1))
+pred_gender = gender_dict[round(pred[0][0][0])]
+pred_age = round(pred[1][0][0])
+
+print("Original Gender:", gender_dict[y_gender[image_index]], "Original Age:", y_age[image_index])
+print("Predicted Gender:", pred_gender, "Predicted Age:", pred_age)
+plt.axis('off')
+plt.imshow(X[image_index].reshape(128, 128), cmap='gray')
