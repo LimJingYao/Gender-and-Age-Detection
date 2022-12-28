@@ -28,7 +28,7 @@ def import_and_predict(photo, model):
 # create the interface with title, header and a section to upload the image
 st.title("Age and Gender Detection")      
 st.header("This is an web app to predict age and gender from a human face image.")
-file = st.file_uploader("Upload an Chin Shan Hong", type=["jpg", "png"])
+file = st.file_uploader("Upload an image file", type=["jpg", "png"])
         
 if file is None:
     st.text("Please upload an image file ^^")
